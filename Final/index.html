@@ -3,94 +3,332 @@
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
         * {
-            margin: 0;
             padding: 0;
-            text-decoration: none;
-            /*文字的項目符號去除*/
-            list-style: none;
-            /*文字的底線去除*/
+            margin: 0;
         }
         
-        p {
-            font-size: 20px;
+        img {
+            width: 228px;
         }
         
-        nav {
-            width: 100%;
-            /*導覽列寬*/
-            background: lightblue;
-            height: 80px;
-            /*導覽列高*/
+        .hr_1 {
+            height: 2px;
+            box-shadow: 0 0 10px 1px black;
         }
         
-        nav ul {
-            float: right;
-            /*顯示在右邊*/
-            margin-right: 20px;
-            /*距離右邊邊界20px*/
-        }
-        
-        nav ul li {
-            display: inline-block;
-            /*水平顯示標籤*/
-            line-height: 80px;
-            /*距離頂端80px*/
-            margin: 0px 30px;
-            /*margin 上   下   左  右
-                     0px  30px 0px 30px*/
-        }
-        
-        nav ul li a {
-            color: blueviolet;
-            font-size: 18px;
-        }
-        
-        nav ul li a:hover {
-            /*滑鼠指到nav ul li a上方時，會執行以下動作*/
-            background-color: coral;
-        }
-        
-        label.logo {
-            color: black;
+        span {
+            color: red;
             font-size: 30px;
-            line-height: 80px;
-            padding: 100px;
+            line-height: 50px;
         }
         
-        @media(max-width:500px) {
-            nav ul li {
-                /*display: block;*/
-                text-align: center;
+        #headerbox {
+            background-color: red;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+        
+        #artclebox {
+            text-align: center;
+        }
+        
+        #footerbox {
+            margin: 0 auto;
+            vertical-align: bottom;
+            background-color: red;
+            width: 90%;
+            height: 80px;
+        }
+        
+        .logo {
+            width: 80px;
+            float: left;
+            height: 80px;
+        }
+        
+        .caption {
+            color: white;
+            line-height: 70px;
+            font-size: 70px;
+            font-weight: bolder;
+            font-family: 標楷體;
+        }
+        
+        .nava {
+            color: black;
+            text-decoration: none;
+            font-size: 150%;
+        }
+        
+        .sale {
+            font-size: 200%;
+            color: red;
+            font-family: 標楷體;
+        }
+        
+        .woman {
+            padding: 40px 40px 0px 40px;
+            font-size: 300%;
+            font-family: 標楷體;
+            color: black;
+        }
+        
+        .womansrc {
+            width: 25%;
+            margin: 10px;
+        }
+        
+        .contant {
+            vertical-align: bottom;
+        }
+        
+        .tablebox {
+            display: table;
+            border-collapse: collapse;
+            border-spacing: 5px;
+            width: 85%;
+            margin: 0 auto;
+        }
+        
+        .trbox {
+            display: table-row;
+        }
+        
+        .thbox {
+            display: table-cell;
+        }
+        
+        .tdbox {
+            display: table-cell;
+            width: 25%;
+            padding: 20px;
+            font-family: 標楷體;
+        }
+        
+        .fooerto {
+            font-family: 微軟正黑體;
+            font-size: 180%;
+            color: lightyellow;
+            line-height: 250%;
+        }
+        
+        .arthr {
+            border-width: 0;
+            height: 1.5px;
+            width: 20%;
+            background-image: linear-gradient(90deg, transparent 0%, black 50%, transparent 100%);
+            margin: 15px auto;
+        }
+        
+        @media(min-width: 1100px) {
+            #button {
+                text-align: right;
+                font-weight: bold;
+                font-family: 微軟正黑體;
+                background-color: rgba(255, 0, 0, 0.8);
+                border-color: black;
+                border-width: 5px;
                 width: 100%;
-                line-height: 100px;
+                position: sticky;
+                position: -webkit-sticky;
+                top: 0px;
             }
-            ul {
+            #button ul li {
+                display: inline;
+            }
+            input {
+                border: 0px rgba(255, 0, 0, 0.801) none;
+                background-color: rgba(255, 0, 0, 0.5);
+                font-size: 140%;
+                margin: 4px 2px;
+                animation-duration: 1s;
+            }
+            input:hover {
+                border: 0px rgba(255, 0, 0, 0.808) none;
+                background-color: white;
+                color: red;
+            }
+        }
+        
+        @media(max-width: 1100px) {
+            #button {
+                text-align: right;
+                font-weight: bold;
+                background-color: rgba(144, 238, 144, 0.486);
+                border-radius: 10px;
+                border-color: black;
+                border-width: 5px;
+                text-align: center;
+                width: 10%;
+                position: fixed;
+                top: 40%;
+                left: 5px;
+            }
+            input {
+                font-family: 微軟正黑體;
+                border: 0px rgba(255, 255, 255, 0) none;
+                background-color: rgba(255, 255, 255, 0);
+                border-radius: 10px;
+                font-size: 140%;
+                margin: 4px 2px;
+                animation-duration: 1s;
+            }
+            input:hover {
+                border: 0px red none;
+                background-color: rgba(122, 122, 122, 0.466);
+                color: lightgreen;
+            }
+            img {
+                width: 228px;
+            }
+            .tdbox {
+                display: none;
+            }
+            .thbox {
                 display: block;
+                text-align: center;
+                position: relative;
+            }
+            .thbox::after {
+                content: attr(data-td)"  "attr(data-p);
+                font-family: 微軟正黑體;
+                font-size: 120%;
+                position: absolute;
+                left: 70%;
+                bottom: 50%;
             }
         }
     </style>
 </head>
 
 <body>
-    <nav>
-        <label class="logo">孟璇購物</label>
+    <div id="headerbox">
+        <div><img class="logo" src="logo.png" borond="0"></div>
+        <div><span class="caption">孟璇服飾網</span></div>
+    </div>
+    <hr class="hr_1">
+    <div id="button">
         <ul>
-            <li><a href="#">服飾</a></li>
-            <li><a href="#">3C產品</a></li>
-            <li><a href="#">汽車零件</a></li>
-            <li><a href="#">生活百貨</a></li>
+            <li>
+                <a class="nava" href="#dash_1"><input type="button" value="簡介"></a>
+            </li>
+            <li>
+                <a class="nava" href="#desh_2"><input type="button" value="女裝"></a>
+            </li>
+            <li>
+                <a class="nava" href="#desh_3"><input type="button" value="男裝"></a>
+            </li>
+            <li>
+                <a class="nava" href="#desh_4"><input type="button" value="童裝"></a>
+            </li>
+            <li>
+                <a class="nava" href="#desh_5"><input type="button" value="配件"></a>
+            </li>
         </ul>
-    </nav>
-    <p></p>
-    <img src="images服飾.jpg">
-    <img src="3C.jpg">
-    <img src="汽車.jpg">
-    <img src="生活.jpg">
+
+
+    </div>
+    <div id="artclebox">
+        <div id="dash_1">
+            <img style="width: 60%;padding: 40px;" src="封面.jpg">
+            <marquee direction="left" width=60% scrollamount="9">
+                <div class="sale">~即日起消費滿1000元即享免運~會員享優惠全館服飾商品買一送一~慶祝周年慶全館打8折~</div>
+            </marquee>
+        </div>
+        <hr class="hr_1">
+        <div id="desh_2">
+            <div class="woman">女裝</div>
+            <hr class="arthr">
+            <div class="tablebox">
+                <div class="trbox">
+                    <div class="thbox" data-td="特級亞麻襯衫 (長袖)" data-p=" NT$790"><img src="女裝1.jpg"></div>
+                    <div class="thbox" data-td="特級亞麻襯衫 (無袖)" data-p=" NT$590"><img src="女裝2.jpg"></div>
+                    <div class="thbox" data-td="特級亞麻襯衫 (長袖)" data-p=" NT$790"><img src="女裝3.jpg"></div>
+                    <div class="thbox" data-td="特級亞麻條紋襯衫(長袖)" data-p=" NT$790"><img src="女裝4.jpg"></div>
+                </div>
+                <div class="trbox">
+                    <div class="tdbox"> 特級亞麻襯衫 (長袖)<br>100％使用具最佳的涼爽感和高質感的特級亞 奢華單品。<br><span> NT$790</span> </div>
+                    <div class="tdbox"> 特級亞麻襯衫 (無袖)<br>充滿涼爽感的100％亞麻素材 多色簡單搭配。<br><span>$590 </span></div>
+                    <div class="tdbox"> 特級亞麻襯衫 (長袖)<br>穿起來身形很好看、顏色也很多樣 滿襯膚色的<br><span>$790</span></div>
+                    <div class="tdbox">特級亞麻條紋襯衫(長袖)<br>特級亞麻薄涼爽不悶熱，當作薄外搭很適合 <br><span>$790</span></div>
+                </div>
+            </div>
+        </div>
+        <hr class="hr_1">
+        <div id=desh_3>
+            <div class="woman">男裝</div>
+            <hr class="arthr">
+            <div class="tablebox">
+                <div class="trbox">
+                    <div class="thbox" data-td="DRY 彈性休閒連帽外套 (長袖)" data-p=" NT$590"><img src="男裝1jpg.jpg"></div>
+                    <div class="thbox" data-td="條紋T恤(長袖)" data-p=" NT390"><img src="男裝2.jpg"></div>
+                    <div class="thbox" data-td="休閒圓領上衣 (五分袖)" data-p=" NT$290"><img src="男裝3.jpg"></div>
+                    <div class="thbox" data-td="休閒圓領上衣 (五分袖)" data-p=" NT$290"><img src="男裝4.jpg"></div>
+                </div>
+                <div class="trbox">
+                    <div class="tdbox">DRY 彈性休閒連帽外套 (長袖)<br>吸汗快乾，簡約時尚，活動性良好的舒適外套。<br><span>$590</span> </div>
+                    <div class="tdbox">條紋T恤(長袖)<br>布料厚實且質感自然，單穿就有型。做層搭也很亮眼。<br><span>$390</span></div>
+                    <div class="tdbox">休閒圓領上衣 (五分袖)<br>設計剪裁均採用粗紡悠閒風格的單品。寬鬆時尚搭配。<br><span>$290</span></div>
+                    <div class="tdbox"> 休閒圓領上衣 (五分袖)<br>內裡則是舒適的AIRism。流行的寬版剪裁。<br><span>$290</span></div>
+                </div>
+            </div>
+
+        </div>
+        <hr class="hr_1">
+        <div id=desh_4>
+            <div class="woman">童裝</div>
+            <hr class="arthr">
+            <div class="tablebox">
+                <div class="trbox">
+                    <div class="thbox" data-td="童裝 AIRism (長袖)" data-p=" NT$590"><img src="童裝1.jpg"></div>
+                    <div class="thbox" data-td="女童 JOY OF PRINT 套裝(短袖)" data-p=" NT$590"><img src="童裝2.jpg"></div>
+                    <div class="thbox" data-td="童裝 輕便圓領T恤 (短袖)" data-p=" NT$190"><img src="童裝3.jpg"></div>
+                    <div class="thbox" data-td="童裝 長版上衣"><img src="童裝4.jpg" data-p=" NT$190"></div>
+                </div>
+                <div class="trbox">
+                    <div class="tdbox">童裝 AIRism (長袖)<br>抗UV網眼連帽外套 穿上就可輕鬆防曬<br><span>$590</span></div>
+                    <div class="tdbox">女童 JOY OF PRINT 套裝(短袖)<br>芬蘭設計品牌MARIMEKKO聯名系列。<br><span>$590</span> </div>
+                    <div class="tdbox">童裝 輕便圓領T恤 (短袖)<br>童裝T恤，簡約時尚風格單品。<br><span>$190</span></div>
+                    <div class="tdbox">童裝 長版上衣新登場。<br>無袖洋裝，即可展現清爽風格。<br><span>$190</span></div>
+                </div>
+            </div>
+
+        </div>
+        <hr class="hr_1">
+        <div id=desh_5>
+            <div class="woman">配件</div>
+            <hr class="arthr">
+            <div class="tablebox">
+                <div class="trbox">
+                    <div class="thbox" data-td=" 休閒鞋" data-p=" NT$790"><img src="配件.jpg"></div>
+                    <div class="thbox" data-td="背包" data-p=" NT$790"><img src="配件2.jpg"></div>
+                    <div class="thbox" data-td="單肩包" data-p=" NT$790"><img src="配件3.jpg"></div>
+                    <div class="thbox" data-td="皮帶" data-p=" NT$790"><img src="配件4.jpg"></div>
+                </div>
+                <div class="trbox">
+                    <div class="tdbox">休閒鞋<br>長時間行走也不易疲倦・細緻織法鞋子輕盈且透氣性。<br><span> NT$790</span></div>
+                    <div class="tdbox">背包 <br>十足耐用性及超高的收納力。恰好的尺寸大小，無論是誰都能夠輕鬆使用。<br><span> NT$790</span></div>
+                    <div class="tdbox">單肩包 <br>展現優異的耐久性及高收納力。同時也能當作造型的亮點配件。<br><span> NT$790</span></div>
+                    <div class="tdbox">皮帶 <br>採用義大利皮革，散發高雅感的皮帶。具重厚感，展現清新風格。<br><span> NT$790</span></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="footerbox">
+        <a href="http://127.0.0.1:5500/%E8%B3%BC%E7%89%A9.html"> <img class="logo" src="logo.png" alt=""></a>
+        <div class="fooerto">
+            <div>孟璇服飾網</span>
+            </div>
+        </div>
+
+    </div>
+
 </body>
 
 </html>
